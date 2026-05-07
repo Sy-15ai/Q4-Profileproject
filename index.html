@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Dashboard</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    display:flex;
+    background:#eef2f7;
+}
+
+/* SIDEBAR */
+
+.sidebar{
+    width:240px;
+    height:100vh;
+    background:linear-gradient(to bottom, #27374d, #1b263b);
+    color:white;
+    padding:20px;
+    position:fixed;
+}
+
+.logo{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.logo h2{
+    font-size:28px;
+}
+
+.menu a{
+    display:block;
+    color:white;
+    text-decoration:none;
+    padding:14px;
+    margin:10px 0;
+    border-radius:10px;
+    transition:0.3s;
+}
+
+.menu a:hover{
+    background:#526d82;
+    transform:translateX(5px);
+}
+
+/* MAIN CONTENT */
+
+.main{
+    margin-left:260px;
+    padding:30px;
+    width:100%;
+}
+
+.title{
+    background:#27374d;
+    color:white;
+    display:inline-block;
+    padding:12px 25px;
+    border-radius:12px;
+    margin-bottom:30px;
+}
+
+/* PROFILE CARD */
+
+.profile-card{
+    background:white;
+    width:350px;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+.main{
+    margin-left:240px;
+    width:100%;
+    height:100vh;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+.profile-card img{
+    width:120px;
+    display:block;
+    margin:auto;
+    margin-bottom:20px;
+}
+
+.info{
+    margin:15px 0;
+}
+
+.label{
+    color:gray;
+    font-size:14px;
+}
+
+.value{
+    font-weight:bold;
+    margin-top:5px;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    margin-top:20px;
+    border:none;
+    border-radius:10px;
+    background:#27374d;
+    color:white;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#526d82;
+}
+
+</style>
+
+</head>
+<body>
+
+<!-- SIDEBAR -->
+
+<div class="sidebar">
+
+    <div class="logo">
+        <h2>STUDENT</h2>
+    </div>
+
+    <div class="menu">
+        <a href="#">🏠 Dashboard</a>
+        <a href="#">📚 Subjects</a>
+        <a href="#">📝 Activities</a>
+        <a href="#">👤 Profile</a>
+        <a href="#">⚙ Settings</a>
+    </div>
+
+</div>
+
+<!-- MAIN -->
+
+<div class="main">
+
+    <div class="title">
+        <h1>My Profile</h1>
+    </div>
+
+
+    <div class="profile-card">
+
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
+
+        <div class="info">
+            <div class="label">Student Name</div>
+            <div class="value">Juan Dela Cruz</div>
+        </div>
+
+        <div class="info">
+            <div class="label">Grade & Section</div>
+            <div class="value">Grade 9 - Ruby</div>
+        </div>
+
+        <div class="info">
+            <div class="label">Email</div>
+            <div class="value">student@email.com</div>
+        </div>
+
+        <button>Edit Profile</button>
+
+    </div>
+
+</div>
+
+</body>
+</html>
