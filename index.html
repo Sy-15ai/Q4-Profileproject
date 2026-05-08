@@ -4,9 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Q4 Profile</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
 <style>
+
 *{
     margin:0;
     padding:0;
@@ -15,7 +17,6 @@
 }
 
 body{
-    display:flex;
     background:#eef2f7;
 }
 
@@ -28,6 +29,8 @@ body{
     color:white;
     padding:20px;
     position:fixed;
+    top:0;
+    left:0;
 }
 
 .logo{
@@ -36,7 +39,8 @@ body{
 }
 
 .logo h2{
-    font-size:28px;
+    font-size:32px;
+    margin-top:10px;
 }
 
 .menu a{
@@ -54,19 +58,35 @@ body{
     transform:translateX(5px);
 }
 
-/* MAIN CONTENT */
+/* MAIN */
 
 .main{
-    margin-left:260px;
+    margin-left:240px;
+    min-height:100vh;
     padding:30px;
-    width:100%;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
 }
+
+/* NAVBAR */
+
+.custom-navbar{
+    width:100%;
+    background:white;
+    border-radius:15px;
+    padding:10px 20px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.1);
+    margin-bottom:40px;
+}
+
+/* TITLE */
 
 .title{
     background:#27374d;
     color:white;
-    display:inline-block;
-    padding:12px 25px;
+    padding:12px 30px;
     border-radius:12px;
     margin-bottom:30px;
 }
@@ -75,30 +95,24 @@ body{
 
 .profile-card{
     background:white;
-    width:350px;
-    padding:25px;
+    width:360px;
+    padding:30px;
     border-radius:20px;
     box-shadow:0 5px 15px rgba(0,0,0,0.1);
 }
-.main{
-    margin-left:240px;
-    width:100%;
-    height:100vh;
 
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-}
 .profile-card img{
-    width:120px;
+    width:130px;
+    height:130px;
+    object-fit:cover;
+    border-radius:10px;
     display:block;
     margin:auto;
     margin-bottom:20px;
 }
 
 .info{
-    margin:15px 0;
+    margin:18px 0;
 }
 
 .label{
@@ -107,11 +121,12 @@ body{
 }
 
 .value{
+    font-size:22px;
     font-weight:bold;
     margin-top:5px;
 }
 
-button{
+.profile-btn{
     width:100%;
     padding:12px;
     margin-top:20px;
@@ -119,54 +134,19 @@ button{
     border-radius:10px;
     background:#27374d;
     color:white;
+    font-size:16px;
     cursor:pointer;
     transition:0.3s;
 }
 
-button:hover{
+.profile-btn:hover{
     background:#526d82;
 }
 
 </style>
+</head>
+
 <body>
-    <div class="d-flex justify-content-center mt-3">
-                      <nav class="navbar navbar-expand-lg">
-    <div class="container-fluid text-center" id="container1">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="mynavbar">
-        <ul class="navbar-nav mx-auto align-items-center">
-          <li class="nav-item">
-            <a class="nav-link text-dark" href="dashboard.html">Home</a>
-          </li>            
-          <li class="nav-item">
-            <a class="nav-link text-dark" href="notebook.html">Notebooks</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-dark" href="task.html">Tasks</a>
-          </li>
-
-          <a class="navbar-brand mx-lg-5" href="#">
-        <img src="eagle.png" alt="Logo" style="height:70px;">
-      </a>
-
-          <li class="nav-item">
-            <a class="nav-link text-dark" href="profile.html">Profile</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-dark" href="index.html">Logout</a>
-          </li>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-    </div>
-
-
-
-
 
 <!-- SIDEBAR -->
 
@@ -177,62 +157,79 @@ button:hover{
     </div>
 
     <div class="menu">
-        <a href="#"> Dashboard</a>
-        <a href="#"> Subjects</a>
-        <a href="#"> Activities</a>
-        <a href="#"> Profile</a>
-        <a href="#"> Settings</a>
+        <a href="#">Dashboard</a>
+        <a href="#">Subjects</a>
+        <a href="#">Activities</a>
+        <a href="#">Profile</a>
+        <a href="#">Settings</a>
     </div>
 
 </div>
 
-    <div class="d-flex justify-content-center mt-3">
-                      <nav class="navbar navbar-expand-lg">
-    <div class="container-fluid text-center" id="container1">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="mynavbar">
-        <ul class="navbar-nav mx-auto align-items-center">
-          <li class="nav-item">
-            <a class="nav-link text-dark" href="dashboard.html">Home</a>
-          </li>            
-          <li class="nav-item">
-            <a class="nav-link text-dark" href="notebook.html">Notebooks</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-dark" href="task.html">Tasks</a>
-          </li>
-
-          <a class="navbar-brand mx-lg-5" href="#">
-        <img src="eagle.png" alt="Logo" style="height:70px;">
-      </a>
-
-          <li class="nav-item">
-            <a class="nav-link text-dark" href="profile.html">Profile</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-dark" href="index.html">Logout</a>
-          </li>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-    </div>
-<br>
-<!-- MAIN -->
+<!-- MAIN CONTENT -->
 
 <div class="main">
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar navbar-expand-lg custom-navbar">
+
+        <div class="container-fluid">
+
+            <!-- LOGO -->
+            <a class="navbar-brand" href="#">
+                <img src="eagle.png" alt="Logo" style="height:60px;">
+            </a>
+
+            <!-- TOGGLER -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- NAV LINKS -->
+            <div class="collapse navbar-collapse" id="mynavbar">
+
+                <ul class="navbar-nav mx-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="dashboard.html">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="notebook.html">Notebooks</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="task.html">Tasks</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="profile.html">Profile</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="index.html">Logout</a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <!-- TITLE -->
 
     <div class="title">
         <h1>My Profile</h1>
     </div>
 
+    <!-- PROFILE CARD -->
 
     <div class="profile-card">
 
-        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/LeBron_James_%2851959977144%29_%28cropped2%29.jpg">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/LeBron_James_%2851959977144%29_%28cropped2%29.jpg" alt="Profile">
 
         <div class="info">
             <div class="label">Student Name</div>
@@ -249,11 +246,15 @@ button:hover{
             <div class="value">LebronJames@email.com</div>
         </div>
 
-        <button>Edit Profile</button>
+        <button class="profile-btn">Edit Profile</button>
 
     </div>
 
 </div>
+        <footer>
+    <p>By Sean Chua, Andre Pagud, Jowinson Sy, Dylan Alip</p>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
